@@ -550,6 +550,7 @@ tr:nth-child(even) {
     max-width: var(--fixed-width);
   }
   .question {
+    margin-top: 100px;
     background: var(--clr-white);
     border-radius: var(--radius);
     box-shadow: var(--light-shadow);
@@ -582,6 +583,7 @@ tr:nth-child(even) {
   .question-text {
     padding: 1rem 0 1.5rem 0;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
+    transition: .5s;
   }
   .question-text p {
     margin-bottom: 0;
@@ -603,7 +605,15 @@ tr:nth-child(even) {
     display: none;
   }
   
-
+  .job-description p {
+	font-size: 13px;
+	line-height: 35px;
+	font-weight: 300;
+}
+.question-title h2 {
+	font-size: 22px;
+	font-weight: 500;
+}
 
 
 
