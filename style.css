@@ -782,6 +782,9 @@ tr:nth-child(even) {
     .main-content p {
         width: 100%;
     }
+    .question {
+        padding: 0px;
+    }
 }
 @media (max-width:878px){
     th, td {
@@ -847,6 +850,54 @@ tr:nth-child(even) {
     }
 
 }
+@media (max-width:850px){
+    .question-title {
+        display: inline;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: capitalize;
+        padding-bottom: 1rem;
+        /* background: var(--second-bg-color); */
+        padding: 11px 10px;
+        border-radius: 10px;
+        line-height: 16px;
+        border-bottom: 1px solid var(--main-color);
+        /* width: 103%; */
+        background: none;
+    }
+    .question-title h2 {
+        font-size: 15px !important;
+        margin-bottom: 12px;
+        line-height: 26px;
+    }
+    .question-title p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    .job-description {
+        margin-left: 10px;
+    }
+    .job-description p {
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 11px;
+    }
+    .ml-20 {
+        margin-left: 0;
+    }
+    .ml-120 {
+        margin-left: 0;
+    }
+    .ml-50 {
+        margin-left: 0;
+    }
+    .ml-25 {
+        margin-left: 0;
+    }
+    .question {
+        text-align: center;
+    }
+}
 
 @media (max-width:440px) {
     .logo {
@@ -867,16 +918,37 @@ tr:nth-child(even) {
         font-size: 14px;
     }
     .question-title h2 {
-        font-size: 12px !important;
+        font-size: 15px !important;
+        margin-bottom: 12px;
+        line-height: 26px;
     }
     .question-title p {
-        font-size: 10px;
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    .job-description {
+        margin-left: 10px;
     }
     .job-description p {
-        font-size: 11px;
-        line-height: 27px;
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 11px;
     }
     .mb-100 {
         margin-bottom: 40px;
+    }
+    .question-title {
+        display: inline;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: capitalize;
+        padding-bottom: 1rem;
+        /* background: var(--second-bg-color); */
+        padding: 11px 10px;
+        border-radius: 10px;
+        line-height: 16px;
+        border-bottom: 1px solid var(--main-color);
+        /* width: 103%; */
+        background: none;
     }
 }
