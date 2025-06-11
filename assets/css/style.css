@@ -102,7 +102,15 @@ ul {
     cursor: pointer;
     border: 2px solid var(--primary_color);
 }
-
+@media screen and (max-width: 575px) {
+    .theme-btn {
+        padding: 11px 24px 10px 24px;
+    }
+    .logo {
+        font-size: 35px;
+        line-height: 45px;
+    }
+}
 .theme-btn i {
     font-size: 24px;
     margin-right: 10px;
