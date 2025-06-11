@@ -1152,6 +1152,9 @@ body .body-overlay {
 .skills .skill .skill-inner img {
     display: block;
     margin: auto auto 29px auto;
+    width: 70px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
 }
 
 .skills .skill .skill-inner h1 {
