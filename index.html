@@ -200,7 +200,7 @@
             </li>
         </ul>
 
-        <a href="#" class="theme-btn">
+        <a href="/assets/saikat's_resume.pdf" class="theme-btn">
             <i class="las la-envelope"></i> Download Cv!
         </a>
     </div>
@@ -220,19 +220,21 @@
                     <p class="copyright">&copy; 2025 Al Mumeetu Saikat. All Rights Reserved</p>
                     <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
                         <li>
-                            <a target="_blank" href="https://www.facebook.com/almumeetu27"><i class="lab la-facebook-f"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/almumeetu27"><i
+                                    class="lab la-facebook-f"></i></a>
                         </li>
                         <li>
                             <a target="_blank" href="https://x.com/AlMumeetu"><i class="lab la-twitter"></i></a>
                         </li>
                         <li>
-                            <a target="_blank" href="https://www.linkedin.com/in/almumeetu/"><i class="lab la-linkedin-in"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/almumeetu/"><i
+                                    class="lab la-linkedin-in"></i></a>
                         </li>
                         <li>
                             <a target="_blank" href="https://github.com/almumeetu"><i class="lab la-github"></i></a>
                         </li>
                     </ul>
-                    <a href="#" class="theme-btn">
+                    <a href="/assets/saikat's_resume.pdf" class="theme-btn">
                         <i class="las la-envelope"></i> Download Cv!
                     </a>
                 </div>
@@ -304,7 +306,8 @@
                                     <i class="las la-shapes"></i> my skills
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">My
-                                    <span>Advantages</span></h1>
+                                    <span>Advantages</span>
+                                </h1>
                             </div>
 
                             <div class="row skills text-center">
@@ -536,7 +539,8 @@
                                     <i class="las la-briefcase"></i> Resume
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">Education &
-                                    <span>Experience</span></h1>
+                                    <span>Experience</span>
+                                </h1>
                             </div>
 
                             <div class="resume-timeline">
@@ -547,7 +551,8 @@
                                     <p>Softzino Technology</p>
                                     <p>Working on Japanese WordPress projects involving custom theme and plugin
                                         development. Communicated directly with Japanese clients. Developed the
-                                        <strong>DupleXer</strong> plugin (searchable on Google for details).</p>
+                                        <strong>DupleXer</strong> plugin (searchable on Google for details).
+                                    </p>
                                 </div>
 
                                 <div class="item scroll-animation" data-animation="fade_from_right">
@@ -605,7 +610,8 @@
                                     <i class="las la-stream"></i> Services
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">My
-                                    <span>Specializations</span></h1>
+                                    <span>Specializations</span>
+                                </h1>
                             </div>
 
                             <div class="services-items">
@@ -688,7 +694,8 @@
                                     <i class="las la-grip-vertical"></i> portfolio
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">Featured
-                                    <span>Projects</span></h1>
+                                    <span>Projects</span>
+                                </h1>
                             </div>
 
                             <div class="row portfolio-items">
@@ -1058,13 +1065,14 @@
                                     <i class="las la-dollar-sign"></i> contact
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">Let's Work
-                                    <span>Together!</span></h1>
+                                    <span>Together!</span>
+                                </h1>
                             </div>
                             <h3 class="scroll-animation" data-animation="fade_from_bottom">almumeetu@gmail.com</h3>
                             <p id="required-msg">* Marked fields are required to fill.</p>
 
                             <form class="contact-form scroll-animation" data-animation="fade_from_bottom" method="POST"
-                                action="mailer.php">
+                                action="mail.php">
                                 <div class="alert alert-success messenger-box-contact__msg" style="display: none"
                                     role="alert">
                                     Your message was sent successfully.
@@ -1093,8 +1101,7 @@
                                     <div class="col-md-6">
                                         <div class="input-group">
                                             <label for="subject">subject <sup>*</sup></label>
-                                            <input type="text" name="subject" id="subject"
-                                                placeholder="Subject">
+                                            <input type="text" name="subject" id="subject" placeholder="Subject">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -1138,6 +1145,42 @@
             </div>
         </div>
     </main>
+
+
+    <script>
+        document.querySelector(".contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const messageBox = form.querySelector(".messenger-box-contact__msg");
+
+            fetch(form.action, {
+                method: "POST",
+                body: formData,
+            })
+                .then((res) => res.text())
+                .then((result) => {
+                    messageBox.innerHTML = result;
+                    messageBox.style.display = "block";
+                    messageBox.classList.remove("alert-success", "alert-danger");
+
+                    if (result.toLowerCase().includes("success")) {
+                        messageBox.classList.add("alert-success");
+                    } else {
+                        messageBox.classList.add("alert-danger");
+                    }
+
+                    form.reset();
+                })
+                .catch((err) => {
+                    messageBox.innerHTML = "Something went wrong. Please try again.";
+                    messageBox.style.display = "block";
+                    messageBox.classList.remove("alert-success");
+                    messageBox.classList.add("alert-danger");
+                });
+        });
+    </script>
 
 
     <script src="./assets/js/jquery.js"></script>
