@@ -799,7 +799,7 @@ main.drake-main {
 }
 
 .left-sidebar .sidebar-header {
-    margin-bottom: 65px;
+    margin-bottom: 40px;
 }
 
 .left-sidebar .sidebar-header .designation {
@@ -829,7 +829,7 @@ main.drake-main {
 
 .left-sidebar .social-profile {
     gap: 8px;
-    margin-bottom: 118px;
+    margin-bottom: 60px;
 }
 
 .left-sidebar .social-profile li a {
